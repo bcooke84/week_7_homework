@@ -12,7 +12,6 @@ public class PianoTest {
         piano = new Piano(100.00, 150.00, "Wood", "Black", InstrumentType.KEYBOARD, 88);
     }
 
-
     @Test
     public void getCostPrice() {
         assertEquals(100, piano.getCostPrice(), 0.01);
@@ -43,4 +42,13 @@ public class PianoTest {
         assertEquals(88, piano.getNumberOfKeys());
     }
 
+    @Test
+    public void getMarkup() {
+        assertEquals(50.00, piano.calculateMarkup(), 0.01);
+    }
+
+    @Test
+    public void canPlay() {
+        assertEquals("Plink, plonk!", piano.play());
+    }
 }

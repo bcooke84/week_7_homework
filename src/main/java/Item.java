@@ -1,4 +1,4 @@
-public abstract class Item {
+public abstract class Item implements ISell {
 
     private double costPrice;
     private double sellingPrice;
@@ -16,5 +16,8 @@ public abstract class Item {
         return this.sellingPrice;
     }
 
+    public double calculateMarkup() {
+        return getSellingPrice() - getCostPrice();
+    }
 
 }

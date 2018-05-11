@@ -11,5 +11,9 @@ public class Piano extends Instrument {
         return numberOfKeys;
     }
 
+    public String play() {
+        return "Plink, plonk!";
+    }
+
 
 }

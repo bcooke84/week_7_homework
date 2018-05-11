@@ -1,4 +1,4 @@
-public abstract class Instrument extends Item {
+public abstract class Instrument extends Item implements IPlay {
 
     private String material;
     private String colour;
@@ -22,4 +22,6 @@ public abstract class Instrument extends Item {
     public InstrumentType getType() {
         return type;
     }
+
+
 }

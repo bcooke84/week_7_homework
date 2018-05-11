@@ -10,4 +10,9 @@ public class Saxophone extends Instrument{
     public SaxPitch getSaxPitch() {
         return saxPitch;
     }
+
+    public String play() {
+        return "Doo, doo, doo!";
+    }
+
 }

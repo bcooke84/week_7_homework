@@ -42,4 +42,8 @@ public class SaxophoneTest {
         assertEquals(InstrumentType.WOODWIND, saxophone.getType());
     }
 
+    @Test
+    public void canPlay() {
+        assertEquals("Doo, doo, doo!", saxophone.play());
+    }
 }
