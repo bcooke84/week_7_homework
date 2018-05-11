@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class TrumpetClass {
+public class TrumpetTest {
 
     Trumpet trumpet;
 
@@ -17,5 +17,5 @@ public class TrumpetClass {
         assertEquals(3, trumpet.getNumberOfValves());
     }
 
-    
+
 }
