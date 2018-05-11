@@ -20,4 +20,8 @@ public abstract class Item implements ISell {
         return getSellingPrice() - getCostPrice();
     }
 
+    public double calculateMarkupPercentage() {
+        return (((getSellingPrice() / getCostPrice()) - 1) * 100);
+    }
+
 }

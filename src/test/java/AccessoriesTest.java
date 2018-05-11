@@ -31,4 +31,9 @@ public class AccessoriesTest {
     public void canGetMarkUp() {
         assertEquals(2.50, accessory.calculateMarkup(), 0.01);
     }
+
+    @Test
+    public void canGetMarkUpPercentage() {
+        assertEquals(100, accessory.calculateMarkupPercentage(), 0.01);
+    }
 }

@@ -47,5 +47,10 @@ public class TrumpetTest {
         assertEquals("Toot, toot!", trumpet.play());
     }
 
+    @Test
+    public void canGetMarkupPercentage() {
+        assertEquals(100, trumpet.calculateMarkupPercentage(), 0.01);
+    }
+
 
 }

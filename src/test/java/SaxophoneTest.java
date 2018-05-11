@@ -46,4 +46,10 @@ public class SaxophoneTest {
     public void canPlay() {
         assertEquals("Doo, doo, doo!", saxophone.play());
     }
+
+    @Test
+    public void canGetMarkupPercentage() {
+        assertEquals(50, saxophone.calculateMarkupPercentage(), 0.01);
+    }
+
 }

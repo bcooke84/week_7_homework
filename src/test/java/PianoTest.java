@@ -51,4 +51,9 @@ public class PianoTest {
     public void canPlay() {
         assertEquals("Plink, plonk!", piano.play());
     }
+
+    @Test
+    public void canGetMarkupPercentage() {
+        assertEquals(50, piano.calculateMarkupPercentage(), 0.01);
+    }
 }
