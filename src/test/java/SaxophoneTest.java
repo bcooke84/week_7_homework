@@ -16,4 +16,30 @@ public class SaxophoneTest {
     public void canGetPitch() {
         assertEquals(SaxPitch.ALTO, saxophone.getSaxPitch());
     }
+
+    @Test
+    public void getCostPrice() {
+        assertEquals(100, saxophone.getCostPrice(), 0.01);
+    }
+
+    @Test
+    public void canGetSellingPrice() {
+        assertEquals(150.00, saxophone.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canGetMaterial() {
+        assertEquals("Brass", saxophone.getMaterial());
+    }
+
+    @Test
+    public void canGetColour() {
+        assertEquals("Gold", saxophone.getColour());
+    }
+
+    @Test
+    public void canGetInstrumentType() {
+        assertEquals(InstrumentType.WOODWIND, saxophone.getType());
+    }
+
 }
