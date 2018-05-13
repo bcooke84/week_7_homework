@@ -1,11 +1,16 @@
+import com.sun.tools.javac.jvm.Items;
+
 import java.util.ArrayList;
 
 public class Shop {
 
-    ArrayList<Item> stock;
+    private ArrayList<Item> stock;
+    private double till;
+
 
     public Shop() {
         this.stock = new ArrayList<>();
+        this.till = 0;
     }
 
     public ArrayList<Item> getStock() {
@@ -38,6 +43,24 @@ public class Shop {
         return total;
     }
 
+    public double getTillBalance() {
+        return this.till;
+    }
+
+    public void increaseTillBalance(Item item) {
+        this.till += item.getSellingPrice();
+    }
+
+    public void setTill(double till) {
+        this.till = till;
+    }
+
+    public void sellItem(Item item) {
+            if (stock.contains(item)) {
+                removeItemFromStock(item);
+                increaseTillBalance(item);
+        }
+    }
 
 
 }

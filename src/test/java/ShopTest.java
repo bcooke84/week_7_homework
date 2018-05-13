@@ -47,4 +47,23 @@ public class ShopTest {
         shop.addItemToStock(saxophone);
         assertEquals(3, shop.getStock().size());
     }
+
+    @Test
+    public void canGetTillBalance() {
+        shop.setTill(10.00);
+        assertEquals(10.00, shop.getTillBalance(), 0.01);
+    }
+
+    @Test
+    public void canIncreaseBalance() {
+        shop.increaseTillBalance(item);
+        assertEquals(150.00,shop.getTillBalance(), 0.01);
+    }
+
+    @Test
+    public void canSellItem() {
+        shop.sellItem(item);
+        assertEquals(150.00, shop.getTillBalance(), 0.01);
+        assertEquals(0, shop.countNumberOfItemsInStock());
+    }
 }
